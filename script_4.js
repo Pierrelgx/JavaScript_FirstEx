@@ -19,10 +19,32 @@ const entrepreneurs = [
     { first: 'Peter', last: 'Thiel', year: 1967 }
   ];
 
+  //Je veux appeler et afficher les entrepreneurs nés dans les années 70
+
+  //méthode pour les chercher
 let seventies = [];
 for (let i = 0; i < entrepreneurs.length; i++) {
     if (entrepreneurs[i].year >= 1970 && entrepreneurs[i].year <=1980){
         seventies.push(entrepreneurs[i]) ;
     }
 }
+//là cela va les afficher
 console.log(seventies)
+
+
+//maintenant je veux afficher un array avec tous les noms et prénoms
+
+let nameFiltres = entrepreneurs.filter(function(first, last){
+    console.log(first, last)
+})
+console.log(nameFiltres)
+
+
+// Trie par odre alphabetique de nom de famille
+function SortArray(x, y){
+    if (x.LastName < y.LastName) {return -1;}
+    if (x.LastName > y.LastName) {return 1;}
+    return 0;
+}
+var s = a.sort(SortArray);
+console.log(s);
